@@ -10,6 +10,11 @@
       <p>
 	Tähän tuodaan sisältö muualta.
       </p>
-      {% endblock %}
+      {% endblock %} 
+        <ul>
+            <li><a href="{{ url_for('tasks_index') }}">Lista työtunneista</a></li>
+            <li><a href="{{ url_for('tasks_form') }}">Uusi kirjaus</a></li>
+        </ul>
+      
     </body>
   </html>
