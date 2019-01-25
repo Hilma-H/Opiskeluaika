@@ -1,3 +1,8 @@
+[Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com/task/)
+
+[User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
+
+
 ## Tsoha projekti:
 Valitsin aiheeksi valmiin aiheen **"Projektin työaikaseuranta"**, mutta teen sovelluksen painottaen ennemminkin opiskeluun käytettyä aikaa.
 
