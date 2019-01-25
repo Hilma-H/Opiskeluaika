@@ -1,4 +1,4 @@
-[Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com/task/)
+[Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com)
 
 [User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
 
