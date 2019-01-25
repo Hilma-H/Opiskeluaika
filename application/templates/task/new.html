@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+<form method="POST" action="{{ url_for('tasks_create') }}">
+  <h1>Lisää uusi työaikakirjaus</h1>
+  <p>Nimi: <input type="text" name="name"/></p>
+  <p>Kurssi: <input type="text" name="course"/></p>
+  <p>Käytetty aika (tunteina): <input type="text" name="timeHours"/></p>
+  
+  <input type="submit" value="Lisää työaika :)"/>
+</form>
+{% endblock %}
