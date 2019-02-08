@@ -15,7 +15,8 @@
 
 ### Puutteet:
 - validointi ei toimi (numerot viimeisessä kentässä)
-- jostain syystä "muokkaa" nappi ei vielä toimi
+- muokkaa napin toiminta
+- rekisteröinnin tallentaminen
 
 
 ## Tsoha projekti:
