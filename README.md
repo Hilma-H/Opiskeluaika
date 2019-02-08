@@ -8,6 +8,7 @@
 - tietokantaan lisätty voi kirjautua sisään ja ulos.
 - voi lisätä aikakirjauksen
 - voi tarkastella listaa kirjauksista
+- voi poistaa kirjauksen
 ### Puutteet:
 - validointi ei toimi (numerot viimeisessä kentässä)
 
