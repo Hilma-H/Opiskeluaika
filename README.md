@@ -1,5 +1,6 @@
 **Käyttäjätunnus:** testi  
 **Salasana:** salasana  
+
 [Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com)
 
 [User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
@@ -11,8 +12,11 @@
 - voi lisätä aikakirjauksen
 - voi tarkastella listaa kirjauksista
 - voi poistaa kirjauksen
+
 ### Puutteet:
 - validointi ei toimi (numerot viimeisessä kentässä)
+- jostain syystä "muokkaa" nappi ei vielä toimi
+
 
 ## Tsoha projekti:
 Valitsin aiheeksi valmiin aiheen **"Projektin työaikaseuranta"**, mutta teen sovelluksen painottaen ennemminkin opiskeluun käytettyä aikaa.

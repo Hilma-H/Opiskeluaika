@@ -24,6 +24,13 @@ def task_remove(hours_id):
   
     return redirect(url_for("tasks_index"))
 
+@app.route("/task/<hours_id>/modify")
+@login_required
+def task_modify(hours_id):
+    
+    return redirect(url_for("task_index"))
+
+
 @app.route("/task/", methods=["POST"])
 @login_required
 def tasks_create():

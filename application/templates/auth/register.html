@@ -2,9 +2,18 @@
 
 {% block body %}
 {{ error }}
-<form method="POST" action="{{ url_for('auth_login') }}">
+<form method="POST" action="{{ url_for('auth_form') }}">
   <table>
     <tr>
+      <td>
+          {{ form.name.label }}
+      </td> 
+      <td>
+          {{ form.name }}
+      </td> 
+      </tr>
+    <tr>
+      
       <td>
 	{{ form.username.label }}
       </td>
@@ -22,7 +31,7 @@
     </tr>
     <tr>
       <td colspan="2">
-	<input type="submit" value="Kirjaudu sisään"/>
+	<input type="submit" value="Rekisteröidy"/>
       </td>
     </tr>
 </form>

@@ -15,6 +15,11 @@
             <input type="submit" value="Poista"/>
           </form>
       </td>
+      <td>
+        <form method="POST" action="{{ url_for('task_modify', hours_id=h.id)}}">
+           <input type="submit" value="Muokkaa"/>
+        </form>
+      </td>
     </tr>
     {% endfor %}
   </table>
