@@ -1,8 +1,16 @@
+# Toimii
+- tietokantaan lisätty voi kirjautua sisään ja ulos.
+- voi lisätä aikakirjauksen
+- voi tarkastella listaa kirjauksista
+# Puutteet:
+- validointi ei toimi (numerot viimeisessä kentässä)
+
 [Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com)
 
 [User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
 
 [Tietokantakaaviohahmotelma](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/hahmotelma.jpg)
+
 ## Tsoha projekti:
 Valitsin aiheeksi valmiin aiheen **"Projektin työaikaseuranta"**, mutta teen sovelluksen painottaen ennemminkin opiskeluun käytettyä aikaa.
 
