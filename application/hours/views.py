@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 from application import app, db
 from application.hours.models import Hours
 from application.hours.forms import HoursForm
@@ -31,9 +31,8 @@ def tasks_create():
 
     if not form.validate():
         return render_template("task/new.html", form = form)
-    t = Hours(request.form.get("name"),
-             request.form.get("course"),
-             request.form.get("time"))
+    t = Hours(request.form.get("course"),
+             request.form.get("time"),current_user.id)
 
     db.session().add(t)
     db.session().commit()

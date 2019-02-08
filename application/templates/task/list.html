@@ -3,13 +3,11 @@
 {% block body %}
   <table>
     <tr>
-      <th>Nimi</th>
       <th>Kurssi</th>
       <th>Työtunnit</th>
     </tr>
     {% for h in tasks %}
     <tr>
-      <td>{{ h.name }}</td>
       <td>{{ h.course }}</td>
       <td>{{ h.timeHours }}</td>
       <td>
