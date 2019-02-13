@@ -30,11 +30,11 @@ def auth_logout():
     logout_user()
     return redirect(url_for("index")) 
 
-@app.route("/auth/register")
+@app.route("/auth/register") 
 def auth_form():
     return render_template("auth/register.html", form = RegisterForm())
 
-@app.route("/auth/")
+@app.route("/auth/", methods=["POST"])
 def auth_register():
     form = RegisterForm(request.form)
     if not form.validate():
@@ -44,5 +44,5 @@ def auth_register():
     db.session().add(t)
     db.session().commit()
 
-    return redirect(url_for("tasks_index"))
+    return redirect(url_for("index"))
 

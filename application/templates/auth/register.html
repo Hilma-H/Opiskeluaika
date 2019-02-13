@@ -2,7 +2,7 @@
 
 {% block body %}
 {{ error }}
-<form method="POST" action="{{ url_for('auth_form') }}">
+<form method="POST" action="{{ url_for('auth_register') }}">
   <table>
     <tr>
       <td>
@@ -11,9 +11,8 @@
       <td>
           {{ form.name }}
       </td> 
-      </tr>
+    </tr>
     <tr>
-      
       <td>
 	{{ form.username.label }}
       </td>
