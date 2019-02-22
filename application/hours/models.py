@@ -14,7 +14,7 @@ class Hours(db.Model):
 
     @staticmethod
     def work_hours_sum():
-        stmt = text("SELECT SUM(hours.timehours) FROM hours WHERE account_id =" + str(current_user.id))
+        stmt = text("SELECT SUM(hours.timeHours) FROM hours WHERE account_id =" + str(current_user.id))
 
         res = db.engine.execute(stmt)
 
@@ -26,7 +26,7 @@ class Hours(db.Model):
 
     @staticmethod
     def under_two():
-        stmt = text("SELECT COUNT(hours.timehours) FROM hours WHERE timeHours<2")
+        stmt = text("SELECT COUNT(hours.timeHours) FROM hours WHERE timeHours<2")
 
         res = db.engine.execute(stmt)
 
