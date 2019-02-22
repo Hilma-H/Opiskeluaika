@@ -7,15 +7,15 @@
 [Tietokantakaaviohahmotelma](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/hahmotelma.jpg)
 
 ### Toimii
-- tietokantaan lisätty voi kirjautua sisään ja ulos.
+- voi kirjautua sisään ja ulos.
 - voi lisätä aikakirjauksen
 - voi tarkastella listaa kirjauksista
 - voi poistaa kirjauksen
+- validointi
+- muutama yhteenvetokysely
 
 ### Puutteet:
-- validointi ei toimi (numerot viimeisessä kentässä)
 - muokkaa napin toiminta
-- rekisteröinnin tallentaminen
 
 
 ## Tsoha projekti:
