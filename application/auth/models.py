@@ -2,6 +2,7 @@
 # metodit get_id, is_active, is_anonymous sekä is_authenticated
 
 from application import db
+from sqlalchemy.sql import text
 
 class User(db.Model):
 
@@ -30,3 +31,16 @@ class User(db.Model):
 
     def is_authenticated(self):
         return True
+
+    @staticmethod
+    def work_hours_sum():
+        stmt = text("SELECT accountStudent.name, hours.id FROM accountStudent"
+                    " LEFT JOIN Hours ON Hours.account_id = accountStudent.id"
+                    " GROUP BY accountStudent.id")
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"id":row[0], "name":row[1]})
+
+        return response

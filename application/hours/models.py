@@ -1,4 +1,6 @@
 from application import db
+from sqlalchemy.sql import text
+from flask_login import current_user
 
 class Hours(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -9,3 +11,27 @@ class Hours(db.Model):
         self.course = course
         self.timeHours = timeHours
         self.account_id = account_id
+
+    @staticmethod
+    def work_hours_sum():
+        stmt = text("SELECT SUM(timeHours) FROM hours WHERE account_id =" + str(current_user.id))
+
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"sum":row[0]})
+
+        return response
+
+    @staticmethod
+    def under_two():
+        stmt = text("SELECT COUNT(timeHours) FROM hours WHERE timeHours<2")
+
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"under":row[0]})
+
+        return response

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
-  
+
 {% block body %}
-<form method="POST" action="{{ url_for('tasks_create') }}">
+<form method="POST" action="{{ url_for('task_modify', hours_id=hours.id) }}">
   <table>
     <tr>
       <td>
@@ -35,13 +35,9 @@
     </tr>
     <tr>
       <td colspan="2">
-      <input type="submit" value="Lisää aikakirjaus"/>
+      <input type="submit" value="Tallenna muutokset"/>
       </td>
     </tr>
   </table>
 </form>
 {% endblock %}
-
-<!--
-kommentti
--->

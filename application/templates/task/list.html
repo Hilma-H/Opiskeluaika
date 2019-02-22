@@ -16,10 +16,22 @@
           </form>
       </td>
       <td>
-        <form method="POST" action="{{ url_for('task_modify', hours_id=h.id)}}">
-           <input type="submit" value="Muokkaa"/>
+        <form method="POST" action="{{ url_for('task_modifypage', hours_id=h.id) }}">
+            <input type="submit" value="Muokkaa"/>
         </form>
       </td>
+    </tr>
+    {% endfor %}
+    {% for s in list_sum %}
+    <tr>
+      <td>Työtunteja yhteensä: </td>
+      <td>{{ s.sum }}</td>
+    </tr>
+    {% endfor %}
+    {% for u in under_two %}
+    <tr>
+      <td>Kursseja, joiden tuntimäärä alle 2: </td>
+      <td>{{ u.under }}</td>
     </tr>
     {% endfor %}
   </table>
