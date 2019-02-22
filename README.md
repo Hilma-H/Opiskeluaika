@@ -9,6 +9,8 @@
 
 [Tietokantakaavio](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/tietokantakaavio.jpg)
 
+[Käyttöohje](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/käyttöohje.md)
+
 ### Toimii
 - voi kirjautua sisään ja ulos.
 - voi lisätä aikakirjauksen
