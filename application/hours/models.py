@@ -14,7 +14,7 @@ class Hours(db.Model):
 
     @staticmethod
     def work_hours_sum():
-        stmt = text("SELECT SUM(timeHours) FROM hours WHERE account_id =" + str(current_user.id))
+        stmt = text("SELECT SUM(hours.timeHours) FROM hours WHERE account_id =" + str(current_user.id))
 
         res = db.engine.execute(stmt)
 
