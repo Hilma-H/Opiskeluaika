@@ -28,7 +28,7 @@ def task_remove(hours_id):
   
     return redirect(url_for("tasks_index"))
 
-@app.route("/task/modify/<hours_id>", methods=["GET"])
+@app.route("/task/modify/<hours_id>", methods=["POST"])
 @login_required
 def task_modifypage(hours_id):
     return render_template("task/modify.html", form = HoursForm(), hours_id=hours_id)
