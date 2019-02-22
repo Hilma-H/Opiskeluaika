@@ -1,5 +1,4 @@
-#Käyttöohje
-
+# Käyttöohje. 
 ## Kirjautuminen  
 - Jos käytät sovellusta ensimmäistä kertaa on sinun ensin luotava itsellesi käyttäjätunnus
     - paina oikean yläkulman rekisteröidy-painiketta
