@@ -1,5 +1,8 @@
+**En löytänyt (edelleenkään) ongelmaa, joka aiheuttaa muutos-napin toimimattomuuden**
+
 **Käyttäjätunnus:** testi  
 **Salasana:** salasana  
+
 [Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com)
 
 [User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
