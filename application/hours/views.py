@@ -43,7 +43,7 @@ def task_modify(hours_id):
         task.course = form.course.data
 
     if form.time.data:
-        task.timeHours = form.time.data
+        task.timehours = form.time.data
 
     db.session().commit()
 

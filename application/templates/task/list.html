@@ -9,7 +9,7 @@
     {% for h in tasks %}
     <tr>
       <td>{{ h.course }}</td>
-      <td>{{ h.timeHours }}</td>
+      <td>{{ h.timehours }}</td>
       <td>
           <form method="POST" action="{{ url_for('task_remove', hours_id=h.id) }}">
             <input type="submit" value="Poista"/>

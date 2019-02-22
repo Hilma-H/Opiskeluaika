@@ -5,16 +5,16 @@ from flask_login import current_user
 class Hours(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     course = db.Column(db.String(144), nullable=False)
-    timeHours = db.Column(db.Integer, nullable=False)
+    timehours = db.Column(db.Integer, nullable=False)
     account_id = db.Column(db.Integer, db.ForeignKey('accountStudent.id'),nullable=False)
-    def __init__(self, course, timeHours, account_id):
+    def __init__(self, course, timehours, account_id):
         self.course = course
-        self.timeHours = timeHours
+        self.timehours = timehours
         self.account_id = account_id
 
     @staticmethod
     def work_hours_sum():
-        stmt = text("SELECT SUM(hours.timeHours) FROM hours WHERE account_id =" + str(current_user.id))
+        stmt = text("SELECT SUM(hours.timehours) FROM hours WHERE account_id =" + str(current_user.id))
 
         res = db.engine.execute(stmt)
 
@@ -26,7 +26,7 @@ class Hours(db.Model):
 
     @staticmethod
     def under_two():
-        stmt = text("SELECT COUNT(hours.timeHours) FROM hours WHERE timeHours<2")
+        stmt = text("SELECT COUNT(hours.timehours) FROM hours WHERE timehours<2")
 
         res = db.engine.execute(stmt)
 
