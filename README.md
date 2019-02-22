@@ -7,7 +7,7 @@
 
 [User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
 
-[Tietokantakaaviohahmotelma](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/hahmotelma.jpg)
+[Tietokantakaavio](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/tietokantakaavio.jpg)
 
 ### Toimii
 - voi kirjautua sisään ja ulos.
@@ -20,7 +20,7 @@
 ### Puutteet:
 - muokkaa napin toiminta
 
-
+hahmotelma.jpg
 ## Tsoha projekti:
 Valitsin aiheeksi valmiin aiheen **"Projektin työaikaseuranta"**, mutta teen sovelluksen painottaen ennemminkin opiskeluun käytettyä aikaa.
 
