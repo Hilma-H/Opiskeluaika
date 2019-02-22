@@ -1,6 +1,6 @@
 **Käyttäjätunnus:** testi  
 **Salasana:** salasana  
-
+**SOVELLUS EI TÄLLÄ HETKELLÄ TOIMI HEROKUSSA**
 [Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com)
 
 [User Story](https://github.com/Hilma-H/Opiskeluaika/blob/master/documentation/userstories.md)
