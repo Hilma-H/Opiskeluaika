@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Valittavissa olevat kurssit</th>
+    </tr>
+    {% for c in courses %}
+    <tr>
+      <td>{{ c.name }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+<!--
+      <td>
+          <form method="POST" action="{{ url_for('course_remove', courses_id=c.id) }}">
+            <input type="submit" value="Poista"/>
+          </form>
+      </td>
+      <td>
+        <form method="POST" action="{{ url_for('course_modifypage', courses_id=c.id) }}">
+            <input type="submit" value="Muokkaa"/>
+        </form>
+      </td>
+--> 

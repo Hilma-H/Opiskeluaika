@@ -6,10 +6,10 @@
       <th>Kurssi</th>
       <th>Työtunnit</th>
     </tr>
-    {% for h in tasks %}
+    {% for h in course_hours %}
     <tr>
       <td>{{ h.course }}</td>
-      <td>{{ h.timehours }}</td>
+      <td>{{ h.time }}</td>
       <td>
           <form method="POST" action="{{ url_for('task_remove', hours_id=h.id) }}">
             <input type="submit" value="Poista"/>
@@ -24,14 +24,12 @@
     {% endfor %}
     {% for s in list_sum %}
     <tr>
-      <td>Työtunteja yhteensä: </td>
-      <td>{{ s.sum }}</td>
+      <td><h5>Työtunteja kaikilla kursseilla yhteensä: {{ s.sum }}</h5></td>
     </tr>
     {% endfor %}
     {% for u in under_two %}
     <tr>
-      <td>Kursseja, joiden tuntimäärä alle 2: </td>
-      <td>{{ u.under }}</td>
+      <td><h5>Kursseja, joiden tuntimäärä alle 2: {{ u.under }}</h5></td>
     </tr>
     {% endfor %}
   </table>

@@ -5,20 +5,17 @@
   <table>
     <tr>
       <td>
-        {{ form.course.label }}
+        Kurssi:
       </td>
       <td>
-        {{ form.course }}
-      </td>
-      <td>
-        <ul>
-          {% for error in form.course.errors %}
-          <li>{{ error }}</li>
+        <select name="kurssi">
+          {% for c in courses %}
+            <option value={{ c.id }}>{{ c.name }}</option>
           {% endfor %}
-        </ul>
+        </select>
       </td>
     </tr>
-    <tr>
+    <tr> 
       <td>
         {{ form.time.label }}
       </td>
@@ -41,3 +38,8 @@
   </table>
 </form>
 {% endblock %}
+<!--{% for c in courses %}
+
+<option value="{{ c.id }}">{{ c.course }}</option>
+
+{% endfor %}-->
