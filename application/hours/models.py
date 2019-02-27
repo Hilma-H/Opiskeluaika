@@ -5,7 +5,7 @@ from flask_login import current_user
 class Hours(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     timehours = db.Column(db.Integer, nullable=False)
-    courses_id = db.Column(db.Integer, db.ForeignKey('courses.id'),nullable=False)
+    courses_id = db.Column(db.Integer, db.ForeignKey('courses.id'),nullable=True)
     account_id = db.Column(db.Integer, db.ForeignKey('accountStudent.id'),nullable=False)
     def __init__(self, timehours, courses_id, account_id):
         self.timehours = timehours

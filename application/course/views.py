@@ -30,11 +30,31 @@ def course_create():
 
     return redirect(url_for("courses_index"))
 
-@app.route("/course/<courses_id>", methods=["POST"])
+@app.route("/course/<course_id>", methods=["POST"])
 @login_required
-def course_remove(courses_id):
-    c = Courses.query.get(courses_id)
+def course_remove(course_id):
+    c = Courses.query.get(course_id)
     db.session.delete(c)
     db.session().commit()
   
     return redirect(url_for("courses_index"))
+
+@app.route("/course/modifypage/<course_id>", methods=["GET","POST"])
+@login_required
+def course_modifypage(course_id):
+    return render_template("course/modify.html", form = CourseForm(), course_id = course_id)
+
+@app.route("/course/modify/<course_id>", methods=["POST"])
+@login_required
+def course_modify(course_id):
+    form = CourseForm(request.form)
+    course = Courses.query.get(course_id)
+
+    if form.course.data:
+        course.name = form.course.data
+
+    db.session().commit()
+
+    return redirect(url_for("courses_index"))
+
+    #peruuta nappi

@@ -8,19 +8,21 @@
     {% for c in courses %}
     <tr>
       <td>{{ c.name }}</td>
+      <td>
+          <form method="POST" action="{{ url_for('course_remove', course_id=c.id) }}">
+            <input type="submit" value="Poista"/>
+          </form>
+      </td>
+      <td>
+      <td>
+        <form method="POST" action="{{ url_for('course_modifypage', course_id=c.id) }}">
+          <input type="submit" value="Muokkaa"/>
+        </form>
+      </td>
     </tr>
     {% endfor %}
   </table>
 {% endblock %}
 <!--
-      <td>
-          <form method="POST" action="{{ url_for('course_remove', courses_id=c.id) }}">
-            <input type="submit" value="Poista"/>
-          </form>
-      </td>
-      <td>
-        <form method="POST" action="{{ url_for('course_modifypage', courses_id=c.id) }}">
-            <input type="submit" value="Muokkaa"/>
-        </form>
-      </td>
+      
 --> 
