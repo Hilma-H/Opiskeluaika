@@ -48,3 +48,17 @@ class Hours(db.Model):
             response.append({"under":row[0]})
 
         return response
+
+    @staticmethod
+    def hours_by_course():
+        stmt = text("SELECT Courses.name, SUM(Hours.timehours) FROM Courses, Hours WHERE Courses.id=Hours.courses_id GROUP BY Courses.id")
+
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"kurssi":row[0], "tunnit":row[1]})
+
+        return response
+
+        

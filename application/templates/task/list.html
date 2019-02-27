@@ -22,14 +22,22 @@
       </td>
     </tr>
     {% endfor %}
+    <tr>
+      <th>Statistiikkaa: </th>
+    </tr>
     {% for s in list_sum %}
     <tr>
-      <td><h5>Työtunteja kaikilla kursseilla yhteensä: {{ s.sum }}</h5></td>
+      <td>Työtunteja yhteensä: </td>
+      <td>{{ s.sum }}</td>
     </tr>
     {% endfor %}
-    {% for u in under_two %}
     <tr>
-      <td><h5>Kursseja, joiden tuntimäärä alle 2: {{ u.under }}</h5></td>
+      <th>Tuntimäärä kursseittain:</th>
+    </tr>
+    {% for b in by_course %}
+    <tr>
+      <td>{{ b.kurssi }}</td>
+      <td>{{ b.tunnit }}</td>
     </tr>
     {% endfor %}
   </table>

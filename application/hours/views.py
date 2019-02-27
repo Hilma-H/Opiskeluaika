@@ -14,7 +14,7 @@ def tasks_index():
     tasks = Hours.query.filter_by(account_id=current_user.id).all(),
     course_hours = Hours.course_hours(),
     list_sum = Hours.work_hours_sum(),
-    under_two = Hours.under_two())
+    by_course = Hours.hours_by_course())
 
 @app.route("/task/new/")
 @login_required
