@@ -1,4 +1,3 @@
-**En löytänyt (edelleenkään) ongelmaa, joka aiheuttaa muutos-napin toimimattomuuden**
 
 **Käyttäjätunnus:** testi  
 **Salasana:** salasana  
@@ -14,15 +13,16 @@
 ### Toimii
 - voi kirjautua sisään ja ulos.
 - voi lisätä aikakirjauksen
+- voi lisätä kurssin
 - voi tarkastella listaa kirjauksista
-- voi poistaa kirjauksen
+- voi tarkastella listaa kursseista (nimet)
+- voi poistaa ja muokata yksittäistä kirjausta
 - validointi
 - muutama yhteenvetokysely
 
 ### Puutteet:
-- muokkaa napin toiminta
+- Kursseja ei voi muokata tai poistaa
 
-hahmotelma.jpg
 ## Tsoha projekti:
 Valitsin aiheeksi valmiin aiheen **"Projektin työaikaseuranta"**, mutta teen sovelluksen painottaen ennemminkin opiskeluun käytettyä aikaa.
 
