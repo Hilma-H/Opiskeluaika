@@ -52,7 +52,7 @@ class Hours(db.Model):
 
     @staticmethod
     def under():
-        stmt = text("SELECT Courses.name, SUM(Hours.timehours) as summa FROM Courses LEFT JOIN Hours ON Courses.id=Hours.courses_id  GROUP BY Courses.id HAVING summa<27")
+        stmt = text("SELECT Courses.name, SUM(Hours.timehours) as summa FROM Courses LEFT JOIN Hours ON Courses.id=Hours.courses_id  GROUP BY Courses.id HAVING SUM(Hours.timehours)<27")
 
         res = db.engine.execute(stmt)
 
