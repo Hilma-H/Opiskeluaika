@@ -5,11 +5,12 @@
     <tr>
         {% for n in name %}
         <td>
-          {{ n.course }}
+          <a>Kurssin imi: {{ n.course }}</a>
+          <a>Id: {{ n.id }}</a>
         </td>
         {% endfor %}
         <td>
-          {{hour.timehours}}
+          <a>Tunnit: {{hour.timehours}}</a>
         </td>
     </tr>
   </table>

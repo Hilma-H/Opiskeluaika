@@ -9,9 +9,8 @@ from application.hours.forms import HoursForm
 @app.route("/hours", methods=["GET"])
 @login_required
 def hours_index():
-    # miten hakea kurssit
     return render_template("task/list.html", 
-    tasks = Hours.query.filter_by(account_id=current_user.id).all(),
+#    tasks = Hours.query.filter_by(account_id=current_user.id).all(),
     course_hours = Hours.course_hours(),
     list_sum = Hours.work_hours_sum(),
     by_course = Hours.hours_by_course(),
@@ -47,7 +46,6 @@ def hours_modifypage(hours_id):
 @app.route("/hours/modify/<hours_id>", methods=["POST"])
 @login_required
 def hours_modify(hours_id):
-    # miten vaihdetaan kurssi? (alasvetovalikko)?
     form = HoursForm(request.form)
     task = Hours.query.get(hours_id)
 

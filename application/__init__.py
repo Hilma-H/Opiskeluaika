@@ -14,11 +14,8 @@ else:
     # Pyydetään SQLAlchemyä tulostamaan kaikki SQL-kyselyt
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///tasks.db"    
     app.config["SQLALCHEMY_ECHO"] = True
-
-# Luodaan db-olio, jota käytetään tietokannan käsittelyyn
 db = SQLAlchemy(app)
 
-# Luetaan kansiosta application tiedoston views sisältö ja tasks/models tiedosto
 from application import views
 
 from application.hours import models
@@ -30,7 +27,6 @@ from application.auth import views
 from application.course import models
 from application.course import views
 
-# kirjautuminen
 from application.auth.models import User
 from os import urandom
 app.config["SECRET_KEY"] = urandom(32)
@@ -46,7 +42,6 @@ login_manager.login_message = "Please login to use this functionality."
 def load_user(user_id):
     return User.query.get(user_id)
     
-# Luodaan lopulta tarvittavat tietokantataulut
 try: 
     db.create_all()
 except:

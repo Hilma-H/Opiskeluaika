@@ -56,5 +56,3 @@ def course_modify(course_id):
     db.session().commit()
 
     return redirect(url_for("courses_index"))
-
-    #peruuta nappi

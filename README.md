@@ -1,6 +1,7 @@
 
 **Käyttäjätunnus:** testi  
 **Salasana:** salasana  
+tai voit luoda oman.
 
 [Sovellus Herokussa](https://tranquil-lowlands-88067.herokuapp.com)
 

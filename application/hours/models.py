@@ -11,10 +11,12 @@ class Hours(db.Model):
         self.timehours = timehours
         self.account_id = account_id
         self.courses_id = courses_id
-        
+         
     @staticmethod
     def course_hours():
-        stmt = text("SELECT Courses.name, Hours.timehours, Hours.id FROM Courses, Hours WHERE Courses.id = Hours.courses_id;")
+        stmt = text("SELECT Courses.name, Hours.timehours, Hours.id"
+        " FROM Courses, Hours"
+        " WHERE Courses.id = Hours.courses_id;")
 
         res = db.engine.execute(stmt)
 
@@ -43,7 +45,8 @@ class Hours(db.Model):
 
     @staticmethod
     def work_hours_sum():
-        stmt = text("SELECT SUM(hours.timehours) FROM hours WHERE account_id = :id").params(id=current_user.id)
+        stmt = text("SELECT SUM(hours.timehours)"
+        " FROM hours WHERE account_id = :id").params(id=current_user.id)
 
         res = db.engine.execute(stmt)
 
@@ -56,7 +59,10 @@ class Hours(db.Model):
 
     @staticmethod
     def hours_by_course():
-        stmt = text("SELECT Courses.name, SUM(Hours.timehours) FROM Courses, Hours WHERE Courses.id=Hours.courses_id GROUP BY Courses.id")
+        stmt = text("SELECT Courses.name, SUM(Hours.timehours)"
+        " FROM Courses, Hours"
+        " WHERE Courses.id=Hours.courses_id"
+        " GROUP BY Courses.id")
 
         res = db.engine.execute(stmt)
 
@@ -68,7 +74,12 @@ class Hours(db.Model):
 
     @staticmethod
     def under():
-        stmt = text("SELECT Courses.name, SUM(Hours.timehours) as summa FROM Courses LEFT JOIN Hours ON Courses.id=Hours.courses_id  GROUP BY Courses.id HAVING SUM(Hours.timehours)<27")
+        stmt = text("SELECT Courses.name, SUM(Hours.timehours) as summa"
+        " FROM Courses"
+        " LEFT JOIN Hours"
+        " ON Courses.id=Hours.courses_id"
+        " GROUP BY Courses.id"
+        " HAVING SUM(Hours.timehours)<27")
 
         res = db.engine.execute(stmt)
 
@@ -78,8 +89,3 @@ class Hours(db.Model):
 
         return response
 
-    # SELECT Course.name, SUM(Hours.timehours) FROM Courses, Hours 
-    # WHERE Courses.id=Hours.courses_id AND SUM(Hours.timehours)<5 GROUP BY Courses.id
-
-    # SELECT SUM(Hours.timehours) as summa, Courses.name FROM Courses 
-    # LEFT JOIN Hours ON Courses.id=Hours.courses_id  GROUP BY Courses.id having (summa<5);

@@ -33,7 +33,7 @@ class User(db.Model):
         return True
 
     @staticmethod
-    def work_hours_sum():
+ #   def work_hours_sum():
         stmt = text("SELECT accountStudent.name, hours.id FROM accountStudent"
                     " LEFT JOIN Hours ON Hours.account_id = accountStudent.id"
                     " GROUP BY accountStudent.id")

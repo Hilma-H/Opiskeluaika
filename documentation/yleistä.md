@@ -1,0 +1,1 @@
+yleinen sisältö: aiheen kuvaus, työn ja sovelluksen rajoitteet, työn puuttuvat ominaisuudet, dokumentaation vastaavuus toteutettuun työhön, omat kokemukset.
