@@ -21,7 +21,6 @@
 - muutama yhteenvetokysely
 
 ### Puutteet:
-- Kursseja ei voi muokata tai poistaa
 
 ## Tsoha projekti:
 Valitsin aiheeksi valmiin aiheen **"Projektin työaikaseuranta"**, mutta teen sovelluksen painottaen ennemminkin opiskeluun käytettyä aikaa.
