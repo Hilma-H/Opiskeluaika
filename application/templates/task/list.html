@@ -11,13 +11,13 @@
       <td>{{ h.course }}</td>
       <td>{{ h.time }}</td>
       <td>
-          <form method="POST" action="{{ url_for('task_remove', hours_id=h.id) }}">
-            <input type="submit" value="Poista"/>
+          <form method="POST" action="{{ url_for('hours_remove', hours_id=h.id) }}">
+            <button type="submit" class="btn btn-outline-danger">Poista</button>
           </form>
       </td>
       <td>
-        <form method="POST" action="{{ url_for('task_modifypage', hours_id=h.id) }}">
-            <input type="submit" value="Muokkaa"/>
+        <form method="POST" action="{{ url_for('hours_modifypage', hours_id=h.id) }}">
+          <button type="submit" class="btn btn-outline-warning">Muokkaa</button>
         </form>
       </td>
     </tr>
@@ -38,6 +38,14 @@
     <tr>
       <td>{{ b.kurssi }}</td>
       <td>{{ b.tunnit }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <th>Kurssit, joissa alle 27 tuntia:</th>
+    </tr>
+    {% for u in under %}
+    <tr>
+      <td>{{ u.kurssi }}</td>
     </tr>
     {% endfor %}
   </table>

@@ -19,7 +19,12 @@
       </td>
     </tr>
       <td colspan="2">
-      <input type="submit" value="Tallenna muutos"/>
+        <button type="submit" class="btn btn-outline-success">Tallennna muutos</button>
+      </td>
+      <td>
+        <form method="POST" action="{{ url_for('courses_index') }}">
+            <button type="submit" class="btn btn-outline-primary">Takaisin</button>
+        </form>
       </td>
     </tr>
   </table>

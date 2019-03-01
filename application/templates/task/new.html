@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
   
 {% block body %}
-<form method="POST" action="{{ url_for('tasks_create') }}">
+<form method="POST" action="{{ url_for('hours_create') }}">
   <table>
     <tr>
       <td>
@@ -32,14 +32,9 @@
     </tr>
     <tr>
       <td colspan="2">
-      <input type="submit" value="Lisää aikakirjaus"/>
+        <button type="submit" class="btn btn-outline-primary">Lisää kirjaus</button>
       </td>
     </tr>
   </table>
 </form>
 {% endblock %}
-<!--{% for c in courses %}
-
-<option value="{{ c.id }}">{{ c.course }}</option>
-
-{% endfor %}-->

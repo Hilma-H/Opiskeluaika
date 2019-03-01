@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<form method="POST" action="{{ url_for('task_modify', hours_id = hours_id) }}">
+<form method="POST" action="{{ url_for('hours_modify', hours_id = hours_id) }}">
   <table>
     <tr>
       <td>
@@ -20,7 +20,12 @@
     </tr>
     <tr>
       <td colspan="2">
-      <input type="submit" value="Tallenna muutos"/>
+        <button type="submit" class="btn btn-outline-success">Tallennna muutos</button>
+      </td>
+      <td>
+        <form method="POST" action="{{ url_for('hours_index') }}">
+          <button type="submit" class="btn btn-outline-primary">Takaisin</button>
+        </form>
       </td>
     </tr>
   </table>

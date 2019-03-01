@@ -22,7 +22,7 @@ class Hours(db.Model):
         for row in res:
             response.append({"course":row[0], "time":row[1], "id":row[2]})
 
-        return response
+        return response 
 
 
     @staticmethod
@@ -37,17 +37,6 @@ class Hours(db.Model):
 
         return response
 
-    @staticmethod
-    def under_two():
-        stmt = text("SELECT COUNT(hours.timehours) FROM hours WHERE timehours<2")
-
-        res = db.engine.execute(stmt)
-
-        response = []
-        for row in res:
-            response.append({"under":row[0]})
-
-        return response
 
     @staticmethod
     def hours_by_course():
@@ -61,4 +50,20 @@ class Hours(db.Model):
 
         return response
 
-        
+    @staticmethod
+    def under():
+        stmt = text("SELECT Courses.name, SUM(Hours.timehours) as summa FROM Courses LEFT JOIN Hours ON Courses.id=Hours.courses_id  GROUP BY Courses.id HAVING summa<27")
+
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"kurssi":row[0], "tunnit":row[1]})
+
+        return response
+
+    # SELECT Course.name, SUM(Hours.timehours) FROM Courses, Hours 
+    # WHERE Courses.id=Hours.courses_id AND SUM(Hours.timehours)<5 GROUP BY Courses.id
+
+    # SELECT SUM(Hours.timehours) as summa, Courses.name FROM Courses 
+    # LEFT JOIN Hours ON Courses.id=Hours.courses_id  GROUP BY Courses.id having (summa<5);

@@ -10,13 +10,13 @@
       <td>{{ c.name }}</td>
       <td>
           <form method="POST" action="{{ url_for('course_remove', course_id=c.id) }}">
-            <input type="submit" value="Poista"/>
+            <button type="submit" class="btn btn-outline-danger">Poista</button>
           </form>
       </td>
       <td>
       <td>
         <form method="POST" action="{{ url_for('course_modifypage', course_id=c.id) }}">
-          <input type="submit" value="Muokkaa"/>
+            <button type="submit" class="btn btn-outline-warning">Muokkaa</button>
         </form>
       </td>
     </tr>
