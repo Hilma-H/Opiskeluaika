@@ -3,20 +3,16 @@
 {% block body %}
 <form method="POST" action="{{ url_for('course_modify', course_id = course_id) }}">
   <table>
+      <div class="form-group">
+          <label for="uusi">{{ form.course.label }}</label>
+          {{ form.course(class="form-control col-md-3") }}
+      </div>
     <tr>
-      <td> 
-        {{ form.course.label }}
-      </td>
-      <td>
-        {{ form.course }}
-      </td>
-      <td>
-        <ul>
-          {% for error in form.course.errors %}
-          <li>{{ error }}</li>
-          {% endfor %}
-        </ul>
-      </td>
+      <ul>
+      {% for error in form.course.errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+      </ul>
     </tr>
       <td colspan="2">
         <button type="submit" class="btn btn-outline-success">Tallennna muutos</button>

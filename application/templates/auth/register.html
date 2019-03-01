@@ -4,35 +4,23 @@
 {{ error }}
 <form method="POST" action="{{ url_for('auth_register') }}">
   <table>
-    <tr>
-      <td>
-          {{ form.name.label }}
-      </td> 
-      <td>
-          {{ form.name }}
-      </td> 
-    </tr>
-    <tr>
-      <td>
-	{{ form.username.label }}
-      </td>
-      <td>
-	{{ form.username }}
-      </td>
-    </tr>
-    <tr>
-      <td>
-	{{ form.password.label }}
-      </td>
-      <td>
-	{{ form.password }}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-          <button type="submit" class="btn btn-outline-primary">Rekisteröidy</button>
-      </td>
-    </tr>
+    <div class="form-group">
+        <label for="uusi">{{ form.name.label }}</label>
+        {{ form.name(class="form-control col-md-3") }}
+    </div>
+    <div class="form-group">
+        <label for="uusi">{{ form.username.label }}</label>
+        {{ form.username(class="form-control col-md-3") }}
+    </div>
+    <div class="form-group">
+        <label for="uusi">{{ form.password.label }}</label>
+        {{ form.password(class="form-control col-md-3") }}
+    </div> 
+  <tr>
+    <td colspan="2">
+      <button type="submit" class="btn btn-outline-primary">Rekisteröidy</button>
+    </td>
+  </tr>
   </table>
 </form>
 {% endblock %}

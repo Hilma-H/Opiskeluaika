@@ -3,10 +3,9 @@
 {% block body %}
 <form method="POST" action="{{ url_for('hours_create') }}">
   <table>
-    <tr>
-      <td>
+      <th>
         Kurssi:
-      </td>
+      </th>
       <td>
         <select name="kurssi">
           {% for c in courses %}
@@ -14,14 +13,11 @@
           {% endfor %}
         </select>
       </td>
-    </tr>
-    <tr> 
-      <td>
-        {{ form.time.label }}
-      </td>
-      <td>
-       {{ form.time }}
-      </td>
+    <tr>
+      <div class="form-group">
+        <label for="uusi">{{ form.time.label }}</label>
+          {{ form.time(class="form-control col-md-3") }}
+        </div> 
       <td>
         <ul>
           {% for error in form.time.errors %}
@@ -38,3 +34,16 @@
   </table>
 </form>
 {% endblock %}
+
+<!--
+  <td class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          valitse
+        </button>
+        {% for c in courses %}
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li{{ c.id(class="dropdown-item") }}>{{ c.name }}</li>
+        </div>
+          {% endfor %}
+      </td>
+-->
