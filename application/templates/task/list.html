@@ -8,7 +8,7 @@
     </tr>
     {% for h in course_hours %}
     <tr>
-      <td>{{ h.course }}</td>
+      <td><a href="{{url_for('hours_single', hours_id=h.id)}}">{{ h.course }}</a></td>
       <td>{{ h.time }}</td>
       <td>
           <form method="POST" action="{{ url_for('hours_remove', hours_id=h.id) }}">

@@ -3,13 +3,11 @@
 {% block body %}
 <form method="POST" action="{{ url_for('course_create') }}">
   <table>
+      <div class="form-group">
+          <label for="uusi">{{ form.course.label }}</label>
+          {{ form.course(class="form-control col-md-3") }}
+      </div>
     <tr>
-      <td>
-        {{ form.course.label }}
-      </td>
-      <td>
-        {{ form.course }}
-      </td>
       <td>
         <ul>
           {% for error in form.course.errors %}
@@ -25,3 +23,17 @@
   </table>
 </form>
 {% endblock %}
+
+<!--
+  <tr>
+    <td>
+    {{ form.course.label }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+    {{ form.course }}
+    </td>
+  </tr>
+
+-->

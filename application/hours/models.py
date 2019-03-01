@@ -26,8 +26,24 @@ class Hours(db.Model):
 
 
     @staticmethod
+    def course_hours_for_id(id):
+        stmt = text("SELECT Courses.name, Hours.timehours, Hours.id"
+        " FROM Hours"
+        " LEFT JOIN Courses ON Courses.id = Hours.courses_id"
+        " WHERE Hours.id = :id").params(id=id)
+
+        res = db.engine.execute(stmt)
+
+        response = []
+        for row in res:
+            response.append({"course":row[0], "time":row[1], "id":row[2]})
+
+        return response 
+
+
+    @staticmethod
     def work_hours_sum():
-        stmt = text("SELECT SUM(hours.timehours) FROM hours WHERE account_id =" + str(current_user.id))
+        stmt = text("SELECT SUM(hours.timehours) FROM hours WHERE account_id = :id").params(id=current_user.id)
 
         res = db.engine.execute(stmt)
 

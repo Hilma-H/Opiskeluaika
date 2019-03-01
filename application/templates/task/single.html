@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+        {% for n in name %}
+        <td>
+          {{ n.course }}
+        </td>
+        {% endfor %}
+        <td>
+          {{hour.timehours}}
+        </td>
+    </tr>
+  </table>
+{% endblock %}
+

@@ -17,6 +17,13 @@ def hours_index():
     by_course = Hours.hours_by_course(),
     under = Hours.under())
 
+@app.route("/hours/<hours_id>", methods=["GET"])
+@login_required
+def hours_single(hours_id):
+    hour = Hours.query.get(hours_id)
+    name = Hours.course_hours_for_id(hours_id)
+    return render_template("task/single.html", hour=hour, name=name)
+
 @app.route("/hours/new/")
 @login_required
 def hours_form():
