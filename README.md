@@ -1,4 +1,4 @@
-## Sovellus opiskeliajan seurantaan
+## Sovellus opiskeluajan seurantaan
 
 **Käyttäjätunnus:** testi  
 **Salasana:** salasana  
