@@ -10,7 +10,7 @@ from application.hours.forms import HoursForm
 @login_required
 def hours_index():
     return render_template("task/list.html", 
-#    tasks = Hours.query.filter_by(account_id=current_user.id).all(),
+    tasks = Hours.query.filter_by(account_id=current_user.id).all(),
     course_hours = Hours.course_hours(),
     list_sum = Hours.work_hours_sum(),
     by_course = Hours.hours_by_course(),
