@@ -1,3 +1,4 @@
+Pushasin vahingossa gitignoressa olleet tiedostot repoon, enkä enää löydä tähän hätään miten ne poistetaan:(
 ## Sovellus opiskeluajan seurantaan
 
 **Käyttäjätunnus:** testi  
