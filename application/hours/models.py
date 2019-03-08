@@ -16,7 +16,7 @@ class Hours(db.Model):
     def course_hours():
         stmt = text("SELECT Courses.name, Hours.timehours, Hours.id"
         " FROM Courses, Hours"
-        " WHERE Courses.id = Hours.courses_id;")
+        " WHERE Courses.id = Hours.courses_id AND account_id = :id").params(id=current_user.id)
 
         res = db.engine.execute(stmt)
 
