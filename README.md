@@ -1,5 +1,5 @@
 Pushasin vahingossa gitignoressa olleet tiedostot repoon, enkä enää löydä tähän hätään miten ne poistetaan:(
-Tein muutoksia koodiin deadlinen jälkeen
+Tein muutoksia koodiin deadlinen jälkeen ja en ole varma toimiiko sovellus kunnolla herokussa
 ## Sovellus opiskeluajan seurantaan
 
 **Käyttäjätunnus:** testi  
