@@ -32,7 +32,7 @@ class Hours(db.Model):
         stmt = text("SELECT Courses.name, Hours.timehours, Hours.id"
         " FROM Hours"
         " LEFT JOIN Courses ON Courses.id = Hours.courses_id"
-        " WHERE Hours.id = :id").params(id=id)
+        " WHERE Hours.id = :id AND account_id = :user").params(id=id, user=current_user.id)
 
         res = db.engine.execute(stmt)
 
@@ -62,7 +62,8 @@ class Hours(db.Model):
         stmt = text("SELECT Courses.name, SUM(Hours.timehours)"
         " FROM Courses, Hours"
         " WHERE Courses.id=Hours.courses_id"
-        " GROUP BY Courses.id")
+        " AND account_id = :user"
+        " GROUP BY Courses.id").params(user=current_user.id)
 
         res = db.engine.execute(stmt)
 
@@ -79,7 +80,8 @@ class Hours(db.Model):
         " LEFT JOIN Hours"
         " ON Courses.id=Hours.courses_id"
         " GROUP BY Courses.id"
-        " HAVING SUM(Hours.timehours)<27")
+        " HAVING SUM(Hours.timehours)<27"
+        " AND account_id = :id").params(id=current_user.id)
 
         res = db.engine.execute(stmt)
 
