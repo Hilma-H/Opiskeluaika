@@ -72,7 +72,7 @@ class Hours(db.Model):
             response.append({"kurssi":row[0], "tunnit":row[1]})
 
         return response
-
+ 
     @staticmethod
     def under():
         stmt = text("SELECT Courses.name, SUM(Hours.timehours) as summa"

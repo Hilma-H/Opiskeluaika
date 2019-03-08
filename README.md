@@ -1,4 +1,5 @@
 Pushasin vahingossa gitignoressa olleet tiedostot repoon, enkä enää löydä tähän hätään miten ne poistetaan:(
+Tein muutoksia koodiin deadlinen jälkeen
 ## Sovellus opiskeluajan seurantaan
 
 **Käyttäjätunnus:** testi  
